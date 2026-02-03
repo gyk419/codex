@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>테트리스</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="app">
+    <section class="panel">
+      <h1>테트리스</h1>
+      <p class="description">화살표 키로 이동, 스페이스로 하드 드롭, Shift로 홀드하세요.</p>
+      <div class="stats">
+        <div>
+          <span>점수</span>
+          <strong id="score">0</strong>
+        </div>
+        <div>
+          <span>레벨</span>
+          <strong id="level">1</strong>
+        </div>
+        <div>
+          <span>줄</span>
+          <strong id="lines">0</strong>
+        </div>
+      </div>
+      <div class="mini-panels">
+        <div>
+          <h2>다음 블록</h2>
+          <canvas id="next" width="120" height="120" aria-label="next piece"></canvas>
+        </div>
+        <div>
+          <h2>홀드</h2>
+          <canvas id="hold" width="120" height="120" aria-label="hold piece"></canvas>
+        </div>
+      </div>
+      <button id="start">게임 시작</button>
+    </section>
+    <section class="board">
+      <canvas id="board" width="300" height="600" aria-label="tetris board"></canvas>
+      <div id="overlay" class="overlay hidden">
+        <h2>게임 오버</h2>
+        <p>시작 버튼을 눌러 다시 시작하세요.</p>
+      </div>
+    </section>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
